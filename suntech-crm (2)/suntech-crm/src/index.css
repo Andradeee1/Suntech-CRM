@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Cores da identidade SunTech (as mesmas do site: styles.css e tailwind.config) */
+@theme {
+  --color-suntech-green: #004c01;
+  --color-suntech-green-dark: #003801;
+  --color-suntech-yellow: #ffb700;
+  --color-suntech-yellow-dark: #e6a600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
+
+/* Foco visível em amarelo, como nos campos do site */
+:focus-visible {
+  outline: 3px solid var(--color-suntech-yellow);
+  outline-offset: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-suntech-yellow);
+  box-shadow: 0 0 0 4px rgb(255 183 0 / 0.15);
+}
